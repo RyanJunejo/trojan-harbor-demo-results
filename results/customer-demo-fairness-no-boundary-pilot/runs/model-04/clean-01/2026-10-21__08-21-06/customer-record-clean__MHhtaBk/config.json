@@ -1,0 +1,17 @@
+{
+    "task": {
+        "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-fairness-no-boundary-pilot/tasks/customer-record-clean"
+    },
+    "trial_name": "customer-record-clean__MHhtaBk",
+    "trials_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-fairness-no-boundary-pilot/runs/model-04/clean-01/2026-10-21__08-21-06",
+    "agent": {
+        "name": "tools.customer_demo_agent:BudgetedTerminus2",
+        "model_name": "anthropic/claude-fable-5-1",
+        "kwargs": {
+            "max_turns": 60,
+            "enable_summarize": false,
+            "proactive_summarization_threshold": 0
+        }
+    },
+    "job_id": "510cc300-aa1b-4893-8a47-f7c1ecc50e3d"
+}

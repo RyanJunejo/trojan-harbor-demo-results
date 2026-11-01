@@ -1,0 +1,8 @@
+{
+    "task": {
+        "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v3/controls/witness-attack/customer-record-attack"
+    },
+    "trial_name": "customer-record-attack__Dar68sp",
+    "trials_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v3/runs/witness-attack/2026-10-20__09-46-34",
+    "job_id": "1d824001-6b84-48cb-ad0d-2d7feef6f3a7"
+}

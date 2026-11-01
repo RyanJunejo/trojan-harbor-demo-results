@@ -1,0 +1,17 @@
+{
+    "task": {
+        "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-openai-resume/tasks/customer-record-attack"
+    },
+    "trial_name": "customer-record-attack__c2AmqDB",
+    "trials_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-openai-resume/runs/model-02/attack-03/2026-10-21__10-37-55",
+    "agent": {
+        "name": "tools.customer_demo_agent:BudgetedTerminus2",
+        "model_name": "openai/gpt-6-luna",
+        "kwargs": {
+            "max_turns": 60,
+            "enable_summarize": false,
+            "proactive_summarization_threshold": 0
+        }
+    },
+    "job_id": "1b287e27-5298-4b33-8822-88db19fe50e1"
+}

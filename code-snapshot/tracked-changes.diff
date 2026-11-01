@@ -1,0 +1,16 @@
+diff --git a/README.md b/README.md
+index dc5bd2c..48005d8 100644
+--- a/README.md
++++ b/README.md
+@@ -193,6 +193,11 @@ SECURITY.md                     Scope and reporting
+ 
+ ## Safety
+ 
++For the separate customer-data demonstration, see
++[`demos/customer-record/`](demos/customer-record/README.md). It uses a private
++demonstration account, matched clean/attack tasks, and a runner for multiple
++models. Its results are separate from the frozen benchmark above.
++
+ Attacker outcomes are **synthetic and local** (fake tokens, local sinks,
+ task-local markers). Containers are intended to run with **`network_mode: none`**
+ and without real credentials or public egress. Do not point these tasks at

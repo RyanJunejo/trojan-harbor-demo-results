@@ -1,0 +1,9 @@
+{
+    "job_name": "2026-10-21__03-37-55",
+    "jobs_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-no-boundary/runs/safe-clean",
+    "tasks": [
+        {
+            "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-no-boundary/controls/safe-clean/customer-record-clean"
+        }
+    ]
+}

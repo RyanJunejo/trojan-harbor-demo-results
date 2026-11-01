@@ -1,0 +1,17 @@
+{
+    "task": {
+        "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round1-x5-anthropic/tasks/customer-record-clean"
+    },
+    "trial_name": "customer-record-clean__y6nxHZV",
+    "trials_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round1-x5-anthropic/runs/model-02/clean-04/2026-10-21__22-21-30",
+    "agent": {
+        "name": "tools.customer_demo_agent:BudgetedTerminus2",
+        "model_name": "anthropic/claude-opus-5-5",
+        "kwargs": {
+            "max_turns": 60,
+            "enable_summarize": false,
+            "proactive_summarization_threshold": 0
+        }
+    },
+    "job_id": "2ab922b2-35c0-4e58-a26f-90392268bb1e"
+}

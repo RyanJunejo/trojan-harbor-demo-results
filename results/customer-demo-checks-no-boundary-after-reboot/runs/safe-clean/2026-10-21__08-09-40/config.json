@@ -1,0 +1,8 @@
+{
+    "jobs_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-no-boundary-after-reboot/runs/safe-clean",
+    "tasks": [
+        {
+            "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-no-boundary-after-reboot/controls/safe-clean/customer-record-clean"
+        }
+    ]
+}

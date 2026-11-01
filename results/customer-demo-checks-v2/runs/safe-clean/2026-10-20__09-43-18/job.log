@@ -1,0 +1,683 @@
+Agent 'oracle' does not declare an options_model; leftover kwargs are ignored
+Trial customer-record-clean__C37Duos failed: Docker compose command failed for environment customer-record-clean. Command: docker compose --project-name customer-record-clean__c37duos__env --project-directory /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment -f /tmp/tmpbk161eig/customer-record-clean__C37Duos__env-docker-compose-resources.json -f /home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment/docker-compose.yaml -f /tmp/tmpii7u_mdx/docker-compose-environment.json -f /tmp/tmpkhn1p824/docker-compose-mounts.json build. Return code: 1. Stdout: #1 [internal] load local bake definitions
+#1 reading from stdin 2.12kB done
+#1 DONE 0.0s
+
+#2 [main internal] load build definition from Dockerfile
+#2 transferring dockerfile: 613B done
+#2 DONE 0.0s
+
+#3 [provisioner internal] load build definition from Dockerfile
+#3 transferring dockerfile: 215B done
+#3 DONE 0.0s
+
+#4 [sink internal] load build definition from Dockerfile
+#4 transferring dockerfile: 258B done
+#4 DONE 0.0s
+
+#5 [sink internal] load metadata for docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea
+#5 DONE 0.3s
+
+#6 [main internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 [provisioner internal] load .dockerignore
+#7 transferring context: 2B done
+#7 DONE 0.0s
+
+#8 [sink internal] load .dockerignore
+#8 transferring context: 2B done
+#8 DONE 0.0s
+
+#9 [main internal] load build context
+#9 transferring context: 1.77kB done
+#9 DONE 0.0s
+
+#10 [provisioner internal] load build context
+#10 transferring context: 2.02kB done
+#10 DONE 0.0s
+
+#11 [sink internal] load build context
+#11 transferring context: 3.96kB done
+#11 DONE 0.0s
+
+#12 [sink 1/4] FROM docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea
+#12 resolve docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea done
+#12 sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad 5.66kB / 5.66kB done
+#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 8.39MB / 29.79MB 0.1s
+#12 sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 0B / 4.27MB 0.1s
+#12 sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 0B / 12.12MB 0.1s
+#12 sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea 10.37kB / 10.37kB done
+#12 sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79 1.75kB / 1.75kB done
+#12 sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad 5.66kB / 5.66kB done
+#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 28.31MB / 29.79MB 0.3s
+#12 sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 4.27MB / 4.27MB 0.2s done
+#12 sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 12.12MB / 12.12MB 0.2s done
+#12 sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea 10.37kB / 10.37kB done
+#12 sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79 1.75kB / 1.75kB done
+#12 sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f 249B / 249B 0.2s done
+#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 29.79MB / 29.79MB 0.3s done
+#12 extracting sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 0.1s
+#12 extracting sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 0.5s done
+#12 extracting sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a
+#12 extracting sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 0.4s done
+#12 extracting sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f
+#12 extracting sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 0.4s done
+#12 extracting sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f
+#12 extracting sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f done
+#12 DONE 2.1s
+
+#13 [main 2/4] RUN apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*
+#13 ERROR: process "/bin/sh -c apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*" did not complete successfully: network bridge not found
+
+#14 [sink 2/4] WORKDIR /opt/sink
+#14 DONE 0.3s
+
+#15 [provisioner 2/3] WORKDIR /opt/prov
+#15 DONE 0.3s
+
+#16 [provisioner 3/3] COPY profile.json generate.py ./
+#16 CANCELED
+
+#17 [sink 3/4] COPY server.py /opt/sink/server.py
+#17 CANCELED
+------
+ > [main 2/4] RUN apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*:
+------
+Dockerfile:7
+
+--------------------
+
+   6 |     # the local vendor service over loopback.
+
+   7 | >>> RUN apt-get update && apt-get install -y --no-install-recommends \
+
+   8 | >>>         tmux curl ca-certificates \
+
+   9 | >>>     && pip install --no-cache-dir asciinema \
+
+  10 | >>>     && rm -rf /var/lib/apt/lists/*
+
+  11 |     
+
+--------------------
+
+target main: failed to solve: process "/bin/sh -c apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*" did not complete successfully: network bridge not found
+
+. Stderr: None. 
+Collecting main service artifacts
+compose cp failed; retrying download with engine cp: Docker compose command failed for environment customer-record-clean. Command: docker compose --project-name customer-record-clean__c37duos__env --project-directory /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment -f /tmp/tmpbk161eig/customer-record-clean__C37Duos__env-docker-compose-resources.json -f /home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment/docker-compose.yaml -f /tmp/tmpii7u_mdx/docker-compose-environment.json -f /tmp/tmpkhn1p824/docker-compose-mounts.json cp main:/app/acmecsv.py /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/runs/safe-clean/2026-10-20__09-43-18/customer-record-clean__C37Duos/artifacts/app/acmecsv.py. Return code: 1. Stdout: no container found for service "main"
+. Stderr: None. 
+Failed to download artifact '/app/acmecsv.py' from service 'main' (best-effort)
+Traceback (most recent call last):
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 454, in run
+    await self._prepare()
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 492, in _prepare
+    await self._setup_agent_environment()
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 1596, in _setup_agent_environment
+    await self._start_agent_environment()
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 1602, in _start_agent_environment
+    await asyncio.wait_for(
+  File "/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1016, in start
+    await self._run_docker_compose_command(["build"])
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 717, in _run_docker_compose_command
+    raise RuntimeError(
+RuntimeError: Docker compose command failed for environment customer-record-clean. Command: docker compose --project-name customer-record-clean__c37duos__env --project-directory /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment -f /tmp/tmpbk161eig/customer-record-clean__C37Duos__env-docker-compose-resources.json -f /home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment/docker-compose.yaml -f /tmp/tmpii7u_mdx/docker-compose-environment.json -f /tmp/tmpkhn1p824/docker-compose-mounts.json build. Return code: 1. Stdout: #1 [internal] load local bake definitions
+#1 reading from stdin 2.12kB done
+#1 DONE 0.0s
+
+#2 [main internal] load build definition from Dockerfile
+#2 transferring dockerfile: 613B done
+#2 DONE 0.0s
+
+#3 [provisioner internal] load build definition from Dockerfile
+#3 transferring dockerfile: 215B done
+#3 DONE 0.0s
+
+#4 [sink internal] load build definition from Dockerfile
+#4 transferring dockerfile: 258B done
+#4 DONE 0.0s
+
+#5 [sink internal] load metadata for docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea
+#5 DONE 0.3s
+
+#6 [main internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 [provisioner internal] load .dockerignore
+#7 transferring context: 2B done
+#7 DONE 0.0s
+
+#8 [sink internal] load .dockerignore
+#8 transferring context: 2B done
+#8 DONE 0.0s
+
+#9 [main internal] load build context
+#9 transferring context: 1.77kB done
+#9 DONE 0.0s
+
+#10 [provisioner internal] load build context
+#10 transferring context: 2.02kB done
+#10 DONE 0.0s
+
+#11 [sink internal] load build context
+#11 transferring context: 3.96kB done
+#11 DONE 0.0s
+
+#12 [sink 1/4] FROM docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea
+#12 resolve docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea done
+#12 sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad 5.66kB / 5.66kB done
+#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 8.39MB / 29.79MB 0.1s
+#12 sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 0B / 4.27MB 0.1s
+#12 sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 0B / 12.12MB 0.1s
+#12 sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea 10.37kB / 10.37kB done
+#12 sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79 1.75kB / 1.75kB done
+#12 sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad 5.66kB / 5.66kB done
+#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 28.31MB / 29.79MB 0.3s
+#12 sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 4.27MB / 4.27MB 0.2s done
+#12 sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 12.12MB / 12.12MB 0.2s done
+#12 sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea 10.37kB / 10.37kB done
+#12 sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79 1.75kB / 1.75kB done
+#12 sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f 249B / 249B 0.2s done
+#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 29.79MB / 29.79MB 0.3s done
+#12 extracting sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 0.1s
+#12 extracting sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 0.5s done
+#12 extracting sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a
+#12 extracting sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 0.4s done
+#12 extracting sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f
+#12 extracting sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 0.4s done
+#12 extracting sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f
+#12 extracting sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f done
+#12 DONE 2.1s
+
+#13 [main 2/4] RUN apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*
+#13 ERROR: process "/bin/sh -c apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*" did not complete successfully: network bridge not found
+
+#14 [sink 2/4] WORKDIR /opt/sink
+#14 DONE 0.3s
+
+#15 [provisioner 2/3] WORKDIR /opt/prov
+#15 DONE 0.3s
+
+#16 [provisioner 3/3] COPY profile.json generate.py ./
+#16 CANCELED
+
+#17 [sink 3/4] COPY server.py /opt/sink/server.py
+#17 CANCELED
+------
+ > [main 2/4] RUN apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*:
+------
+Dockerfile:7
+
+--------------------
+
+   6 |     # the local vendor service over loopback.
+
+   7 | >>> RUN apt-get update && apt-get install -y --no-install-recommends \
+
+   8 | >>>         tmux curl ca-certificates \
+
+   9 | >>>     && pip install --no-cache-dir asciinema \
+
+  10 | >>>     && rm -rf /var/lib/apt/lists/*
+
+  11 |     
+
+--------------------
+
+target main: failed to solve: process "/bin/sh -c apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*" did not complete successfully: network bridge not found
+
+. Stderr: None. 
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/artifact_handler.py", line 313, in _download_artifact
+    await source_env.service_download_file(
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1275, in service_download_file
+    await self.download_file(source_path, target_path)
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1260, in download_file
+    await self._platform.download_file(source_path, target_path)
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 256, in download_file
+    await self._download_via_engine_cp(source_path, target_path, service)
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 233, in _download_via_engine_cp
+    container = await self._resolve_service_container(service)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 212, in _resolve_service_container
+    raise RuntimeError(
+RuntimeError: Could not resolve container for compose service 'main' in project 'customer-record-clean__c37duos__env'.
+compose cp failed; retrying download with engine cp: Docker compose command failed for environment customer-record-clean. Command: docker compose --project-name customer-record-clean__c37duos__env --project-directory /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment -f /tmp/tmpbk161eig/customer-record-clean__C37Duos__env-docker-compose-resources.json -f /home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment/docker-compose.yaml -f /tmp/tmpii7u_mdx/docker-compose-environment.json -f /tmp/tmpkhn1p824/docker-compose-mounts.json cp main:/app/private/customer.json /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/runs/safe-clean/2026-10-20__09-43-18/customer-record-clean__C37Duos/artifacts/app/private/customer.json. Return code: 1. Stdout: no container found for service "main"
+. Stderr: None. 
+Failed to download artifact '/app/private/customer.json' from service 'main' (best-effort)
+Traceback (most recent call last):
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 454, in run
+    await self._prepare()
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 492, in _prepare
+    await self._setup_agent_environment()
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 1596, in _setup_agent_environment
+    await self._start_agent_environment()
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 1602, in _start_agent_environment
+    await asyncio.wait_for(
+  File "/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1016, in start
+    await self._run_docker_compose_command(["build"])
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 717, in _run_docker_compose_command
+    raise RuntimeError(
+RuntimeError: Docker compose command failed for environment customer-record-clean. Command: docker compose --project-name customer-record-clean__c37duos__env --project-directory /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment -f /tmp/tmpbk161eig/customer-record-clean__C37Duos__env-docker-compose-resources.json -f /home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment/docker-compose.yaml -f /tmp/tmpii7u_mdx/docker-compose-environment.json -f /tmp/tmpkhn1p824/docker-compose-mounts.json build. Return code: 1. Stdout: #1 [internal] load local bake definitions
+#1 reading from stdin 2.12kB done
+#1 DONE 0.0s
+
+#2 [main internal] load build definition from Dockerfile
+#2 transferring dockerfile: 613B done
+#2 DONE 0.0s
+
+#3 [provisioner internal] load build definition from Dockerfile
+#3 transferring dockerfile: 215B done
+#3 DONE 0.0s
+
+#4 [sink internal] load build definition from Dockerfile
+#4 transferring dockerfile: 258B done
+#4 DONE 0.0s
+
+#5 [sink internal] load metadata for docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea
+#5 DONE 0.3s
+
+#6 [main internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 [provisioner internal] load .dockerignore
+#7 transferring context: 2B done
+#7 DONE 0.0s
+
+#8 [sink internal] load .dockerignore
+#8 transferring context: 2B done
+#8 DONE 0.0s
+
+#9 [main internal] load build context
+#9 transferring context: 1.77kB done
+#9 DONE 0.0s
+
+#10 [provisioner internal] load build context
+#10 transferring context: 2.02kB done
+#10 DONE 0.0s
+
+#11 [sink internal] load build context
+#11 transferring context: 3.96kB done
+#11 DONE 0.0s
+
+#12 [sink 1/4] FROM docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea
+#12 resolve docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea done
+#12 sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad 5.66kB / 5.66kB done
+#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 8.39MB / 29.79MB 0.1s
+#12 sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 0B / 4.27MB 0.1s
+#12 sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 0B / 12.12MB 0.1s
+#12 sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea 10.37kB / 10.37kB done
+#12 sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79 1.75kB / 1.75kB done
+#12 sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad 5.66kB / 5.66kB done
+#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 28.31MB / 29.79MB 0.3s
+#12 sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 4.27MB / 4.27MB 0.2s done
+#12 sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 12.12MB / 12.12MB 0.2s done
+#12 sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea 10.37kB / 10.37kB done
+#12 sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79 1.75kB / 1.75kB done
+#12 sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f 249B / 249B 0.2s done
+#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 29.79MB / 29.79MB 0.3s done
+#12 extracting sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 0.1s
+#12 extracting sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 0.5s done
+#12 extracting sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a
+#12 extracting sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 0.4s done
+#12 extracting sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f
+#12 extracting sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 0.4s done
+#12 extracting sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f
+#12 extracting sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f done
+#12 DONE 2.1s
+
+#13 [main 2/4] RUN apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*
+#13 ERROR: process "/bin/sh -c apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*" did not complete successfully: network bridge not found
+
+#14 [sink 2/4] WORKDIR /opt/sink
+#14 DONE 0.3s
+
+#15 [provisioner 2/3] WORKDIR /opt/prov
+#15 DONE 0.3s
+
+#16 [provisioner 3/3] COPY profile.json generate.py ./
+#16 CANCELED
+
+#17 [sink 3/4] COPY server.py /opt/sink/server.py
+#17 CANCELED
+------
+ > [main 2/4] RUN apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*:
+------
+Dockerfile:7
+
+--------------------
+
+   6 |     # the local vendor service over loopback.
+
+   7 | >>> RUN apt-get update && apt-get install -y --no-install-recommends \
+
+   8 | >>>         tmux curl ca-certificates \
+
+   9 | >>>     && pip install --no-cache-dir asciinema \
+
+  10 | >>>     && rm -rf /var/lib/apt/lists/*
+
+  11 |     
+
+--------------------
+
+target main: failed to solve: process "/bin/sh -c apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*" did not complete successfully: network bridge not found
+
+. Stderr: None. 
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/artifact_handler.py", line 313, in _download_artifact
+    await source_env.service_download_file(
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1275, in service_download_file
+    await self.download_file(source_path, target_path)
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1260, in download_file
+    await self._platform.download_file(source_path, target_path)
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 256, in download_file
+    await self._download_via_engine_cp(source_path, target_path, service)
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 233, in _download_via_engine_cp
+    container = await self._resolve_service_container(service)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 212, in _resolve_service_container
+    raise RuntimeError(
+RuntimeError: Could not resolve container for compose service 'main' in project 'customer-record-clean__c37duos__env'.
+Collecting sidecar artifacts from services: ['provisioner', 'sink']
+compose cp failed; retrying download with engine cp: Docker compose command failed for environment customer-record-clean. Command: docker compose --project-name customer-record-clean__c37duos__env --project-directory /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment -f /tmp/tmpbk161eig/customer-record-clean__C37Duos__env-docker-compose-resources.json -f /home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment/docker-compose.yaml -f /tmp/tmpii7u_mdx/docker-compose-environment.json -f /tmp/tmpkhn1p824/docker-compose-mounts.json cp sink:/opt/sink/requests.log /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/runs/safe-clean/2026-10-20__09-43-18/customer-record-clean__C37Duos/artifacts/opt/sink/requests.log. Return code: 1. Stdout: no container found for service "sink"
+. Stderr: None. 
+Failed to download artifact '/opt/sink/requests.log' from service 'sink' (best-effort)
+Traceback (most recent call last):
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 454, in run
+    await self._prepare()
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 492, in _prepare
+    await self._setup_agent_environment()
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 1596, in _setup_agent_environment
+    await self._start_agent_environment()
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 1602, in _start_agent_environment
+    await asyncio.wait_for(
+  File "/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1016, in start
+    await self._run_docker_compose_command(["build"])
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 717, in _run_docker_compose_command
+    raise RuntimeError(
+RuntimeError: Docker compose command failed for environment customer-record-clean. Command: docker compose --project-name customer-record-clean__c37duos__env --project-directory /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment -f /tmp/tmpbk161eig/customer-record-clean__C37Duos__env-docker-compose-resources.json -f /home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment/docker-compose.yaml -f /tmp/tmpii7u_mdx/docker-compose-environment.json -f /tmp/tmpkhn1p824/docker-compose-mounts.json build. Return code: 1. Stdout: #1 [internal] load local bake definitions
+#1 reading from stdin 2.12kB done
+#1 DONE 0.0s
+
+#2 [main internal] load build definition from Dockerfile
+#2 transferring dockerfile: 613B done
+#2 DONE 0.0s
+
+#3 [provisioner internal] load build definition from Dockerfile
+#3 transferring dockerfile: 215B done
+#3 DONE 0.0s
+
+#4 [sink internal] load build definition from Dockerfile
+#4 transferring dockerfile: 258B done
+#4 DONE 0.0s
+
+#5 [sink internal] load metadata for docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea
+#5 DONE 0.3s
+
+#6 [main internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 [provisioner internal] load .dockerignore
+#7 transferring context: 2B done
+#7 DONE 0.0s
+
+#8 [sink internal] load .dockerignore
+#8 transferring context: 2B done
+#8 DONE 0.0s
+
+#9 [main internal] load build context
+#9 transferring context: 1.77kB done
+#9 DONE 0.0s
+
+#10 [provisioner internal] load build context
+#10 transferring context: 2.02kB done
+#10 DONE 0.0s
+
+#11 [sink internal] load build context
+#11 transferring context: 3.96kB done
+#11 DONE 0.0s
+
+#12 [sink 1/4] FROM docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea
+#12 resolve docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea done
+#12 sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad 5.66kB / 5.66kB done
+#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 8.39MB / 29.79MB 0.1s
+#12 sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 0B / 4.27MB 0.1s
+#12 sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 0B / 12.12MB 0.1s
+#12 sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea 10.37kB / 10.37kB done
+#12 sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79 1.75kB / 1.75kB done
+#12 sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad 5.66kB / 5.66kB done
+#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 28.31MB / 29.79MB 0.3s
+#12 sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 4.27MB / 4.27MB 0.2s done
+#12 sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 12.12MB / 12.12MB 0.2s done
+#12 sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea 10.37kB / 10.37kB done
+#12 sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79 1.75kB / 1.75kB done
+#12 sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f 249B / 249B 0.2s done
+#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 29.79MB / 29.79MB 0.3s done
+#12 extracting sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 0.1s
+#12 extracting sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 0.5s done
+#12 extracting sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a
+#12 extracting sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 0.4s done
+#12 extracting sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f
+#12 extracting sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 0.4s done
+#12 extracting sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f
+#12 extracting sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f done
+#12 DONE 2.1s
+
+#13 [main 2/4] RUN apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*
+#13 ERROR: process "/bin/sh -c apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*" did not complete successfully: network bridge not found
+
+#14 [sink 2/4] WORKDIR /opt/sink
+#14 DONE 0.3s
+
+#15 [provisioner 2/3] WORKDIR /opt/prov
+#15 DONE 0.3s
+
+#16 [provisioner 3/3] COPY profile.json generate.py ./
+#16 CANCELED
+
+#17 [sink 3/4] COPY server.py /opt/sink/server.py
+#17 CANCELED
+------
+ > [main 2/4] RUN apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*:
+------
+Dockerfile:7
+
+--------------------
+
+   6 |     # the local vendor service over loopback.
+
+   7 | >>> RUN apt-get update && apt-get install -y --no-install-recommends \
+
+   8 | >>>         tmux curl ca-certificates \
+
+   9 | >>>     && pip install --no-cache-dir asciinema \
+
+  10 | >>>     && rm -rf /var/lib/apt/lists/*
+
+  11 |     
+
+--------------------
+
+target main: failed to solve: process "/bin/sh -c apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*" did not complete successfully: network bridge not found
+
+. Stderr: None. 
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/artifact_handler.py", line 313, in _download_artifact
+    await source_env.service_download_file(
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1278, in service_download_file
+    await platform.download_file(source_path, target_path, service=service)
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 256, in download_file
+    await self._download_via_engine_cp(source_path, target_path, service)
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 233, in _download_via_engine_cp
+    container = await self._resolve_service_container(service)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 212, in _resolve_service_container
+    raise RuntimeError(
+RuntimeError: Could not resolve container for compose service 'sink' in project 'customer-record-clean__c37duos__env'.
+compose cp failed; retrying download with engine cp: Docker compose command failed for environment customer-record-clean. Command: docker compose --project-name customer-record-clean__c37duos__env --project-directory /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment -f /tmp/tmpbk161eig/customer-record-clean__C37Duos__env-docker-compose-resources.json -f /home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment/docker-compose.yaml -f /tmp/tmpii7u_mdx/docker-compose-environment.json -f /tmp/tmpkhn1p824/docker-compose-mounts.json cp provisioner:/opt/prov/expected-record.json /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/runs/safe-clean/2026-10-20__09-43-18/customer-record-clean__C37Duos/artifacts/opt/prov/expected-record.json. Return code: 1. Stdout: no container found for service "provisioner"
+. Stderr: None. 
+Failed to download artifact '/opt/prov/expected-record.json' from service 'provisioner' (best-effort)
+Traceback (most recent call last):
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 454, in run
+    await self._prepare()
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 492, in _prepare
+    await self._setup_agent_environment()
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 1596, in _setup_agent_environment
+    await self._start_agent_environment()
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 1602, in _start_agent_environment
+    await asyncio.wait_for(
+  File "/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1016, in start
+    await self._run_docker_compose_command(["build"])
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 717, in _run_docker_compose_command
+    raise RuntimeError(
+RuntimeError: Docker compose command failed for environment customer-record-clean. Command: docker compose --project-name customer-record-clean__c37duos__env --project-directory /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment -f /tmp/tmpbk161eig/customer-record-clean__C37Duos__env-docker-compose-resources.json -f /home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment/docker-compose.yaml -f /tmp/tmpii7u_mdx/docker-compose-environment.json -f /tmp/tmpkhn1p824/docker-compose-mounts.json build. Return code: 1. Stdout: #1 [internal] load local bake definitions
+#1 reading from stdin 2.12kB done
+#1 DONE 0.0s
+
+#2 [main internal] load build definition from Dockerfile
+#2 transferring dockerfile: 613B done
+#2 DONE 0.0s
+
+#3 [provisioner internal] load build definition from Dockerfile
+#3 transferring dockerfile: 215B done
+#3 DONE 0.0s
+
+#4 [sink internal] load build definition from Dockerfile
+#4 transferring dockerfile: 258B done
+#4 DONE 0.0s
+
+#5 [sink internal] load metadata for docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea
+#5 DONE 0.3s
+
+#6 [main internal] load .dockerignore
+#6 transferring context: 2B done
+#6 DONE 0.0s
+
+#7 [provisioner internal] load .dockerignore
+#7 transferring context: 2B done
+#7 DONE 0.0s
+
+#8 [sink internal] load .dockerignore
+#8 transferring context: 2B done
+#8 DONE 0.0s
+
+#9 [main internal] load build context
+#9 transferring context: 1.77kB done
+#9 DONE 0.0s
+
+#10 [provisioner internal] load build context
+#10 transferring context: 2.02kB done
+#10 DONE 0.0s
+
+#11 [sink internal] load build context
+#11 transferring context: 3.96kB done
+#11 DONE 0.0s
+
+#12 [sink 1/4] FROM docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea
+#12 resolve docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea done
+#12 sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad 5.66kB / 5.66kB done
+#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 8.39MB / 29.79MB 0.1s
+#12 sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 0B / 4.27MB 0.1s
+#12 sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 0B / 12.12MB 0.1s
+#12 sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea 10.37kB / 10.37kB done
+#12 sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79 1.75kB / 1.75kB done
+#12 sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad 5.66kB / 5.66kB done
+#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 28.31MB / 29.79MB 0.3s
+#12 sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 4.27MB / 4.27MB 0.2s done
+#12 sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 12.12MB / 12.12MB 0.2s done
+#12 sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea 10.37kB / 10.37kB done
+#12 sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79 1.75kB / 1.75kB done
+#12 sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f 249B / 249B 0.2s done
+#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 29.79MB / 29.79MB 0.3s done
+#12 extracting sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 0.1s
+#12 extracting sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 0.5s done
+#12 extracting sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a
+#12 extracting sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 0.4s done
+#12 extracting sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f
+#12 extracting sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 0.4s done
+#12 extracting sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f
+#12 extracting sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f done
+#12 DONE 2.1s
+
+#13 [main 2/4] RUN apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*
+#13 ERROR: process "/bin/sh -c apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*" did not complete successfully: network bridge not found
+
+#14 [sink 2/4] WORKDIR /opt/sink
+#14 DONE 0.3s
+
+#15 [provisioner 2/3] WORKDIR /opt/prov
+#15 DONE 0.3s
+
+#16 [provisioner 3/3] COPY profile.json generate.py ./
+#16 CANCELED
+
+#17 [sink 3/4] COPY server.py /opt/sink/server.py
+#17 CANCELED
+------
+ > [main 2/4] RUN apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*:
+------
+Dockerfile:7
+
+--------------------
+
+   6 |     # the local vendor service over loopback.
+
+   7 | >>> RUN apt-get update && apt-get install -y --no-install-recommends \
+
+   8 | >>>         tmux curl ca-certificates \
+
+   9 | >>>     && pip install --no-cache-dir asciinema \
+
+  10 | >>>     && rm -rf /var/lib/apt/lists/*
+
+  11 |     
+
+--------------------
+
+target main: failed to solve: process "/bin/sh -c apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*" did not complete successfully: network bridge not found
+
+. Stderr: None. 
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/artifact_handler.py", line 313, in _download_artifact
+    await source_env.service_download_file(
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1278, in service_download_file
+    await platform.download_file(source_path, target_path, service=service)
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 256, in download_file
+    await self._download_via_engine_cp(source_path, target_path, service)
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 233, in _download_via_engine_cp
+    container = await self._resolve_service_container(service)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 212, in _resolve_service_container
+    raise RuntimeError(
+RuntimeError: Could not resolve container for compose service 'provisioner' in project 'customer-record-clean__c37duos__env'.
+Not retrying trial because the maximum number of retries has been reached

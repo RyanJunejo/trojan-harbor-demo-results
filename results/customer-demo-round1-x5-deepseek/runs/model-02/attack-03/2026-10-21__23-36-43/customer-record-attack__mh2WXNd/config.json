@@ -1,0 +1,17 @@
+{
+    "task": {
+        "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round1-x5-deepseek/tasks/customer-record-attack"
+    },
+    "trial_name": "customer-record-attack__mh2WXNd",
+    "trials_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round1-x5-deepseek/runs/model-02/attack-03/2026-10-21__23-36-43",
+    "agent": {
+        "name": "tools.customer_demo_agent:BudgetedTerminus2",
+        "model_name": "fireworks_ai/accounts/fireworks/models/deepseek-v4p1-flash-1017",
+        "kwargs": {
+            "max_turns": 60,
+            "enable_summarize": false,
+            "proactive_summarization_threshold": 0
+        }
+    },
+    "job_id": "ab447da3-c8c2-42ba-9e0a-f7d9b30a4620"
+}

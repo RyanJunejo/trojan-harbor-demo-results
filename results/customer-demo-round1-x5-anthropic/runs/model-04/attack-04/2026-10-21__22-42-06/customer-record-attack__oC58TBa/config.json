@@ -1,0 +1,17 @@
+{
+    "task": {
+        "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round1-x5-anthropic/tasks/customer-record-attack"
+    },
+    "trial_name": "customer-record-attack__oC58TBa",
+    "trials_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round1-x5-anthropic/runs/model-04/attack-04/2026-10-21__22-42-06",
+    "agent": {
+        "name": "tools.customer_demo_agent:BudgetedTerminus2",
+        "model_name": "anthropic/claude-haiku-5-5",
+        "kwargs": {
+            "max_turns": 60,
+            "enable_summarize": false,
+            "proactive_summarization_threshold": 0
+        }
+    },
+    "job_id": "aad19d14-bc6b-4f7e-b0c3-3067a356c135"
+}

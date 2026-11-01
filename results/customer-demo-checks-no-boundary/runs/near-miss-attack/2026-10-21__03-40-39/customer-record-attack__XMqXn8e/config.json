@@ -1,0 +1,8 @@
+{
+    "task": {
+        "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-no-boundary/controls/near-miss-attack/customer-record-attack"
+    },
+    "trial_name": "customer-record-attack__XMqXn8e",
+    "trials_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-no-boundary/runs/near-miss-attack/2026-10-21__03-40-39",
+    "job_id": "f8ced6d7-4100-4712-ac06-ba76c24f8e6a"
+}

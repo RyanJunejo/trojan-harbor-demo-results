@@ -1,0 +1,90 @@
+Traceback (most recent call last):
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 457, in run
+    await self._run()
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/single_step.py", line 41, in _run
+    await self._run_agent()
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/single_step.py", line 77, in _run_agent
+    await self._run_agent_phase(
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 603, in _run_agent_phase
+    await asyncio.wait_for(
+  File "/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/agents/terminus_2/terminus_2.py", line 1743, in run
+    await self._run_agent_loop(
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/agents/terminus_2/terminus_2.py", line 1410, in _run_agent_loop
+    ) = await self._handle_llm_interaction(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/agents/terminus_2/terminus_2.py", line 1288, in _handle_llm_interaction
+    llm_response = await self._query_llm(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 193, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 112, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 157, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/tenacity/_utils.py", line 111, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 116, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/agents/terminus_2/terminus_2.py", line 1279, in _query_llm
+    raise e
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/agents/terminus_2/terminus_2.py", line 1128, in _query_llm
+    llm_response = await chat.chat(
+                   ^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/llms/chat.py", line 89, in chat
+    llm_response: LLMResponse = await self._model.call(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 193, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 112, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 157, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/tenacity/_utils.py", line 111, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 116, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/llms/lite_llm.py", line 406, in call
+    self._handle_litellm_error(e)
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/llms/lite_llm.py", line 641, in _handle_litellm_error
+    raise e
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/llms/lite_llm.py", line 370, in call
+    response = await litellm.acompletion(**completion_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/tools/customer_demo_agent.py", line 25, in guarded
+    raise ProviderRefused(refusal)
+tools.customer_demo_budget.ProviderRefused: provider refusal: cyber

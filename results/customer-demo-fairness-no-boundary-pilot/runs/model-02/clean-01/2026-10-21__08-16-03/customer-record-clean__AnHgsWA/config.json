@@ -1,0 +1,17 @@
+{
+    "task": {
+        "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-fairness-no-boundary-pilot/tasks/customer-record-clean"
+    },
+    "trial_name": "customer-record-clean__AnHgsWA",
+    "trials_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-fairness-no-boundary-pilot/runs/model-02/clean-01/2026-10-21__08-16-03",
+    "agent": {
+        "name": "tools.customer_demo_agent:BudgetedTerminus2",
+        "model_name": "anthropic/claude-sonnet-5-5",
+        "kwargs": {
+            "max_turns": 60,
+            "enable_summarize": false,
+            "proactive_summarization_threshold": 0
+        }
+    },
+    "job_id": "9afb700c-fbd3-40c8-b014-08c9f95912fd"
+}

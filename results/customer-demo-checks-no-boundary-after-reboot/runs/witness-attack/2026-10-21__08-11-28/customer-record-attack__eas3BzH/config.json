@@ -1,0 +1,8 @@
+{
+    "task": {
+        "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-no-boundary-after-reboot/controls/witness-attack/customer-record-attack"
+    },
+    "trial_name": "customer-record-attack__eas3BzH",
+    "trials_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-no-boundary-after-reboot/runs/witness-attack/2026-10-21__08-11-28",
+    "job_id": "717e1d61-2694-417e-9ff8-6a32c0150e87"
+}

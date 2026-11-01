@@ -1,0 +1,20 @@
+{
+    "job_name": "2026-10-21__02-50-13",
+    "jobs_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-grok-pilot/runs/model-01/attack-01",
+    "agents": [
+        {
+            "name": "tools.customer_demo_agent:BudgetedTerminus2",
+            "model_name": "xai/grok-4.5",
+            "kwargs": {
+                "max_turns": 60,
+                "enable_summarize": false,
+                "proactive_summarization_threshold": 0
+            }
+        }
+    ],
+    "tasks": [
+        {
+            "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-grok-pilot/tasks/customer-record-attack"
+        }
+    ]
+}

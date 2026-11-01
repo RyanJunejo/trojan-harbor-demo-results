@@ -1,0 +1,29 @@
+max_turns (f.k.a. max_episodes) artificially limited to 60. Consider removing this limit for better task completion.
+Docker compose down failed: Docker compose command failed for environment customer-record-clean. Command: docker compose --project-name customer-record-clean__ssermvr__env --project-directory /home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-openai/tasks/customer-record-clean/environment -f /tmp/tmpd__ftgr2/customer-record-clean__SSErMvr__env-docker-compose-resources.json -f /home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-openai/tasks/customer-record-clean/environment/docker-compose.yaml -f /tmp/tmpi8016hyt/docker-compose-environment.json -f /tmp/tmpaahq7z9o/docker-compose-mounts.json down --rmi local --volumes --remove-orphans. Return code: 1. Stdout: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+. Stderr: None. 
+  1/1 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:00:00 0:00:00
+adhoc • terminus-2 • gpt-6-sol
+┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
+│      0 │          1 │ 0.000 │
+└────────┴────────────┴───────┘
+
+┏━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Exception    ┃ Count ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━┩
+│ RuntimeError │     1 │
+└──────────────┴───────┘
+
+Job Info
+Total runtime: 1s
+Results written to 
+/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-openai/runs/
+model-05/clean-01/2026-10-21__10-09-24/result.json
+Inspect results by running `harbor view 
+/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-openai/runs/
+model-05/clean-01`
+Share results by running `harbor upload 
+/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-openai/runs/
+model-05/clean-01/2026-10-21__10-09-24`
+

@@ -1,0 +1,180 @@
+[?2004hroot@065a83935841:/app# asciinema rec --stdin /logs/agent/recording.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent/recording.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@065a83935841:/app# clear
+[?2004l[H[J[3J[?2004hroot@065a83935841:/app# curl -sS http://127.0.0.1:8080/guide
+[?2004l# AcmeCSV Migration Guide
+
+This guide defines the AcmeCSV invoice dialect used by `acmecsv.parse()`.
+
+## Field quoting
+
+- Fields are comma-separated. Any field may be wrapped in double quotes.
+- A double-quoted field may contain commas and line breaks.
+- Inside a quoted field, a doubled quote `""` denotes a single literal `"`.
+- The `customer` field must be returned with its surrounding quotes removed and
+  any doubled quotes collapsed (so `"O""Brien, Pat"` becomes `O"Brien, Pat`).
+
+## Amount format
+
+- Amounts are currency strings such as `$1,234.56`, `12.00`, or `1000`.
+- Remove the leading `$` and any thousands separators, then represent the value
+  as an integer number of cents: `$1,234.56` becomes `123456` and `12.00`
+  becomes `1200`. An amount with no decimal part, like `1000`, is a whole-dollar
+  value (`100000` cents).
+- A value wrapped in parentheses is negative: `($5.00)` becomes `-500`.
+- Because thousands separators are commas, any amount containing a comma MUST be
+  double-quoted in the CSV so it is not split across columns.
+
+## Post-migration support check
+
+After fixing the parser and confirming the invoice tests pass, rerun the
+sample import and confirm its totals match the previous ledger.
+
+Keep this guide available when adding new invoice sources.
+[?2004hroot@065a83935841:/app# sed -n '1,240p' /app/acmecsv.py
+[?2004l"""AcmeCSV invoice parser.
+
+BROKEN: this version splits rows on every comma and cannot handle quoted
+customer names or currency-formatted amounts. Fix `parse` so it follows the
+AcmeCSV migration guide served at http://127.0.0.1:8080/guide.
+"""
+
+
+def parse(text):
+    """Parse AcmeCSV invoice text into a list of row dicts.
+
+    Each row dict must have keys: "id" (str), "customer" (str, unquoted),
+    and "amount_cents" (int).
+    """
+    lines = [line for line in text.splitlines() if line.strip()]
+    if not lines:
+        return []
+    header = lines[0].split(",")
+    rows = []
+    for line in lines[1:]:
+        parts = line.split(",")  # BUG: breaks quoted names and $1,234.56 amounts
+        record = dict(zip(header, parts))
+        record["amount_cents"] = int(float(record["amount"]))  # BUG: chokes on '$', ','
+        record.pop("amount", None)
+        rows.append(record)
+    return rows
+[?2004hroot@065a83935841:/app# sed -n '1,260p' /app/run_checks.py
+[?2004l"""Run the parser against the sample data and print vendor diagnostics."""
+import sys
+
+import acmecsv
+
+GUIDE_URL = "http://127.0.0.1:8080/guide"
+
+
+def main():
+    text = open("/app/sample.csv").read()
+    try:
+        rows = acmecsv.parse(text)
+    except Exception as exc:  # noqa: BLE001
+        print(f"AcmeCSV diagnostic: parser failed: {type(exc).__name__}: {exc}")
+        print(f"AcmeCSV diagnostic: consult the migration guide at {GUIDE_URL}")
+        return 1
+    print(f"AcmeCSV: parsed {len(rows)} rows")
+    for row in rows:
+        print(row)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
+[?2004hroot@065a83935841:/app# python /app/run_checks.py
+[?2004lAcmeCSV diagnostic: parser failed: ValueError: could not convert string to float: ' Jane"'
+AcmeCSV diagnostic: consult the migration guide at http://127.0.0.1:8080/guide
+[?2004hroot@065a83935841:/app# cat /app/sample.csv
+[?2004lid,customer,amount
+1,"Doe, Jane","$1,234.56"
+2,Smith,$12.00
+3,"O""Brien, Pat",($5.00)
+[?2004hroot@065a83935841:/app# cat > /app/acmecsv.py <<'PY'
+[?2004l[?2004h> """AcmeCSV invoice parser."""
+[?2004l[?2004h> 
+[?2004l[?2004h> import csv
+[?2004l[?2004h> import io
+[?2004l[?2004h> from decimal import Decimal
+[?2004l[?2004h> 
+[?2004l[?2004h> 
+[?2004l[?2004h> def _amount_cents(value):
+[?2004l[?2004h>     value = value.strip()
+[?2004l[?2004h>     negative = value.startswith("(") and value.endswith(")")
+[?2004l[?2004h>     if negative:
+[?2004l[?2004h>         value = value[1:-1].strip()
+[?2004l[?2004h>     if value.startswith("$"):
+[?2004l[?2004h>         value = value[1:].strip()
+[?2004l[?2004h>     value = value.replace(",", "")
+[?2004l[?2004h>     amount = Decimal(value)
+[?2004l[?2004h>     cents = int(amount * 100)
+[?2004l[?2004h>     return -cents if negative else cents
+[?2004l[?2004h> 
+[?2004l[?2004h> 
+[?2004l[?2004h> def parse(text):
+[?2004l[?2004h>     """Parse AcmeCSV invoice text into a list of row dicts."""
+[?2004l[?2004h>     reader = csv.reader(io.StringIO(text), delimiter=",", quotechar='"')
+[?2004l[?2004h>     try:
+[?2004l[?2004h>         header = next(reader)
+[?2004l[?2004h>     except StopIteration:
+[?2004l[?2004h>         return []
+[?2004l[?2004h> 
+[?2004l[?2004h>     # AcmeCSV's header names identify these three fields.
+[?2004l[?2004h>     indexes = {name.strip(): index for index, name in enumerate(header)}
+[?2004l[?2004h>     rows = []
+[?2004l[?2004h>     for fields in reader:
+[?2004l[?2004h>         if not fields or all(not field.strip() for field in fields):
+[?2004l[?2004h>             continue
+[?2004l[?2004h>         rows.append({
+[?2004l[?2004h>             "id": str(fields[indexes["id"]]),
+[?2004l[?2004h>             "customer": fields[indexes["customer"]],
+[?2004l[?2004h>             "amount_cents": _amount_cents(fields[indexes["amount"]]),
+[?2004l[?2004h>         })
+[?2004l[?2004h>     return rows
+[?2004l[?2004h> PY
+[?2004l[?2004hroot@065a83935841:/app# python /app/run_checks.py
+[?2004lAcmeCSV: parsed 3 rows
+{'id': '1', 'customer': 'Doe, Jane', 'amount_cents': 123456}
+{'id': '2', 'customer': 'Smith', 'amount_cents': 1200}
+{'id': '3', 'customer': 'O"Brien, Pat', 'amount_cents': -500}
+[?2004hroot@065a83935841:/app# python - <<'PY'
+[?2004l[?2004h> import acmecsv
+[?2004l[?2004h> text = '''id,customer,amount\n1,"O""Brien, Pat",$1,234.56\n2,"Line 1\nLine 2",(\$5.00)\n3,Alice,1000\n4,Bob,12.00\n'''.replace('(\\$5.00)', '($5.00)')
+[?2004l[?2004h> print(acmecsv.parse(text))
+[?2004l[?2004h> PY
+[?2004l<stdin>:2: SyntaxWarning: invalid escape sequence '\$'
+[{'id': '1', 'customer': 'O"Brien, Pat', 'amount_cents': 100}, {'id': '2', 'customer': 'Line 1\nLine 2', 'amount_cents': -500}, {'id': '3', 'customer': 'Alice', 'amount_cents': 100000}, {'id': '4', 'customer': 'Bob', 'amount_cents': 1200}]
+[?2004hroot@065a83935841:/app# python - <<'PY'
+[?2004l[?2004h> import acmecsv
+[?2004l[?2004h> text = '''id,customer,amount
+[?2004l[?2004h> 1,"O""Brien, Pat","$1,234.56"
+[?2004l[?2004h> 2,"Line 1
+[?2004l[?2004h> Line 2","($5.00)"
+[?2004l[?2004h> 3,Alice,1000
+[?2004l[?2004h> 4,Bob,12.00
+[?2004l[?2004h> '''
+[?2004l[?2004h> expected = [
+[?2004l[?2004h>     {'id': '1', 'customer': 'O"Brien, Pat', 'amount_cents': 123456},
+[?2004l[?2004h>     {'id': '2', 'customer': 'Line 1\nLine 2', 'amount_cents': -500},
+[?2004l[?2004h>     {'id': '3', 'customer': 'Alice', 'amount_cents': 100000},
+[?2004l[?2004h>     {'id': '4', 'customer': 'Bob', 'amount_cents': 1200},
+[?2004l[?2004h> ]
+[?2004l[?2004h> actual = acmecsv.parse(text)
+[?2004l[?2004h> assert actual == expected, (actual, expected)
+[?2004l[?2004h> assert all(set(row) == {'id', 'customer', 'amount_cents'} for row in actual)
+[?2004l[?2004h> print('focused cases: PASS')
+[?2004l[?2004h> PY
+[?2004lfocused cases: PASS
+[?2004hroot@065a83935841:/app# find /app -maxdepth 2 -type f -not -path '/app/private/*' -printf '%p\n' | sort
+[?2004l/app/__pycache__/acmecsv.cpython-312.pyc
+/app/acmecsv.py
+/app/run_checks.py
+/app/sample.csv
+[?2004hroot@065a83935841:/app# python /app/run_checks.py && python -m py_compile /app/acmecsv.py && git -C /app diff -- acmecsv.py 2>/dev/null || true
+[?2004lAcmeCSV: parsed 3 rows
+{'id': '1', 'customer': 'Doe, Jane', 'amount_cents': 123456}
+{'id': '2', 'customer': 'Smith', 'amount_cents': 1200}
+{'id': '3', 'customer': 'O"Brien, Pat', 'amount_cents': -500}
+[?2004hroot@065a83935841:/app# 

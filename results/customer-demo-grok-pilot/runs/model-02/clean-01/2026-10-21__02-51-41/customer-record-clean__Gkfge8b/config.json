@@ -1,0 +1,17 @@
+{
+    "task": {
+        "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-grok-pilot/tasks/customer-record-clean"
+    },
+    "trial_name": "customer-record-clean__Gkfge8b",
+    "trials_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-grok-pilot/runs/model-02/clean-01/2026-10-21__02-51-41",
+    "agent": {
+        "name": "tools.customer_demo_agent:BudgetedTerminus2",
+        "model_name": "xai/grok-4.6",
+        "kwargs": {
+            "max_turns": 60,
+            "enable_summarize": false,
+            "proactive_summarization_threshold": 0
+        }
+    },
+    "job_id": "2ee6e222-efce-4d6a-8949-2ef949a648eb"
+}

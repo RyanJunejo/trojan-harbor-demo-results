@@ -1,0 +1,26 @@
+  1/1 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:00:01 0:00:00
+adhoc • oracle
+┏━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┓
+┃ Trials ┃ Exceptions ┃  Mean ┃
+┡━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━┩
+│      0 │          1 │ 0.000 │
+└────────┴────────────┴───────┘
+
+┏━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Exception    ┃ Count ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━┩
+│ RuntimeError │     1 │
+└──────────────┴───────┘
+
+Job Info
+Total runtime: 1s
+Results written to 
+/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/runs/witness
+-attack/2026-10-20__09-43-31/result.json
+Inspect results by running `harbor view 
+/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/runs/witness
+-attack`
+Share results by running `harbor upload 
+/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/runs/witness
+-attack/2026-10-20__09-43-31`
+

@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "limit_micro_usd": 1000000,
+  "requests": [
+    {
+      "model": "openai/gpt-6-luna",
+      "status": "settled",
+      "started_at": 1792553844.596057,
+      "reserved_micro_usd": 406144,
+      "accounted_micro_usd": 14,
+      "pricing_checked": "2026-10-21",
+      "pricing_source": "https://developers.openai.com/api/docs/pricing",
+      "output_reservation_tokens": 8192,
+      "response_metadata": {
+        "id": "chatcmpl-EbHQl401AqcMZKKH4CnIFnsLdbQOX",
+        "model": "gpt-6-luna",
+        "finish_reason": "stop"
+      },
+      "prompt_tokens": 13,
+      "completion_tokens": 15
+    },
+    {
+      "model": "openai/gpt-5.6-luna",
+      "status": "settled",
+      "started_at": 1792553847.9069319,
+      "reserved_micro_usd": 814746,
+      "accounted_micro_usd": 13,
+      "pricing_checked": "2026-10-21",
+      "pricing_source": "https://developers.openai.com/api/docs/pricing",
+      "output_reservation_tokens": 8192,
+      "response_metadata": {
+        "id": "chatcmpl-EbHQmgBfNfGG4eieTUDFt3x6NHTYs",
+        "model": "gpt-5.6-luna",
+        "finish_reason": "stop"
+      },
+      "prompt_tokens": 13,
+      "completion_tokens": 4
+    }
+  ],
+  "pricing_checked": "2026-10-21",
+  "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing"
+}

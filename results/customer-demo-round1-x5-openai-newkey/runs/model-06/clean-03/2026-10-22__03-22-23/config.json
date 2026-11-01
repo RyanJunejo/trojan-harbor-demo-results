@@ -1,0 +1,20 @@
+{
+    "job_name": "2026-10-22__03-22-23",
+    "jobs_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round1-x5-openai-newkey/runs/model-06/clean-03",
+    "agents": [
+        {
+            "name": "tools.customer_demo_agent:BudgetedTerminus2",
+            "model_name": "openai/gpt-6-luna",
+            "kwargs": {
+                "max_turns": 60,
+                "enable_summarize": false,
+                "proactive_summarization_threshold": 0
+            }
+        }
+    ],
+    "tasks": [
+        {
+            "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round1-x5-openai-newkey/tasks/customer-record-clean"
+        }
+    ]
+}

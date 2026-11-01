@@ -1,0 +1,37 @@
+{
+    "id": "7624605b-ec3c-4c87-a680-eddd68b87f4c",
+    "started_at": "2026-10-21T22:35:37.612105",
+    "updated_at": "2026-10-21T22:36:44.118513",
+    "finished_at": "2026-10-21T22:36:44.118513",
+    "n_total_trials": 1,
+    "stats": {
+        "n_completed_trials": 1,
+        "n_errored_trials": 1,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "terminus-2__claude-sonnet-5-5__adhoc": {
+                "n_trials": 0,
+                "n_errors": 1,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {},
+                "exception_stats": {
+                    "ProviderRefused": [
+                        "customer-record-attack__FEeJ3KF"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": 1398,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 233,
+        "cost_usd": 0.005823
+    }
+}

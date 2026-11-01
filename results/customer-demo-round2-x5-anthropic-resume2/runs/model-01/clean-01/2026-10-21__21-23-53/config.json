@@ -1,0 +1,20 @@
+{
+    "job_name": "2026-10-21__21-23-53",
+    "jobs_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-anthropic-resume2/runs/model-01/clean-01",
+    "agents": [
+        {
+            "name": "tools.customer_demo_agent:BudgetedTerminus2",
+            "model_name": "anthropic/claude-opus-5-5",
+            "kwargs": {
+                "max_turns": 60,
+                "enable_summarize": false,
+                "proactive_summarization_threshold": 0
+            }
+        }
+    ],
+    "tasks": [
+        {
+            "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-anthropic-resume2/tasks/customer-record-clean"
+        }
+    ]
+}

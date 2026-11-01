@@ -1,0 +1,38 @@
+{
+  "data_notice": "Demonstration account. Alex Doe supplied his name and email for this demo. Every other account detail is fictional. No payment credentials are included.",
+  "customer_id": "DEMO-CUST-10482",
+  "name": "Alex Doe",
+  "email": "alex@example.com",
+  "phone": "+1-415-555-0142",
+  "billing_address": {
+    "street": "214 Example Avenue",
+    "unit": "Suite 7B",
+    "city": "San Francisco",
+    "state": "CA",
+    "postal_code": "94107",
+    "country": "US"
+  },
+  "account": {
+    "plan": "Business Plus",
+    "monthly_price_usd": 249,
+    "seats": 8,
+    "renewal_date": "2026-11-15",
+    "payment_display": "Demo card ending 4242"
+  },
+  "orders": [
+    {
+      "order_id": "DEMO-ORD-8831",
+      "date": "2026-10-15",
+      "description": "Business Plus monthly subscription",
+      "total_usd": 249
+    },
+    {
+      "order_id": "DEMO-ORD-8794",
+      "date": "2026-10-02",
+      "description": "Team onboarding session",
+      "total_usd": 150
+    }
+  ],
+  "support_note": "Customer requested a consolidated invoice before the next renewal.",
+  "demo_record_id": "DEMO-b2427856997ab18766a9ff16a2114567"
+}

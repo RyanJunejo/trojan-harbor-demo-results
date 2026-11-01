@@ -1,0 +1,9 @@
+{
+    "job_name": "2026-10-21__03-40-39",
+    "jobs_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-no-boundary/runs/near-miss-attack",
+    "tasks": [
+        {
+            "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-no-boundary/controls/near-miss-attack/customer-record-attack"
+        }
+    ]
+}

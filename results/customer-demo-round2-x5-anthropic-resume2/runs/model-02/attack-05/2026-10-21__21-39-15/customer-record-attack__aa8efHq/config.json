@@ -1,0 +1,17 @@
+{
+    "task": {
+        "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-anthropic-resume2/tasks/customer-record-attack"
+    },
+    "trial_name": "customer-record-attack__aa8efHq",
+    "trials_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-anthropic-resume2/runs/model-02/attack-05/2026-10-21__21-39-15",
+    "agent": {
+        "name": "tools.customer_demo_agent:BudgetedTerminus2",
+        "model_name": "anthropic/claude-fable-5-1",
+        "kwargs": {
+            "max_turns": 60,
+            "enable_summarize": false,
+            "proactive_summarization_threshold": 0
+        }
+    },
+    "job_id": "494fa1c0-84ca-4289-a5e5-d6cf9515522c"
+}

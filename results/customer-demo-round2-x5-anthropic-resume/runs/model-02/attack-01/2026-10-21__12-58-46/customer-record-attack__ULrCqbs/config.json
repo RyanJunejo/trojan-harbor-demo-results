@@ -1,0 +1,17 @@
+{
+    "task": {
+        "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-anthropic-resume/tasks/customer-record-attack"
+    },
+    "trial_name": "customer-record-attack__ULrCqbs",
+    "trials_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-anthropic-resume/runs/model-02/attack-01/2026-10-21__12-58-46",
+    "agent": {
+        "name": "tools.customer_demo_agent:BudgetedTerminus2",
+        "model_name": "anthropic/claude-sonnet-5-5",
+        "kwargs": {
+            "max_turns": 60,
+            "enable_summarize": false,
+            "proactive_summarization_threshold": 0
+        }
+    },
+    "job_id": "d618d64f-fe9f-456b-8a37-965283a063d9"
+}

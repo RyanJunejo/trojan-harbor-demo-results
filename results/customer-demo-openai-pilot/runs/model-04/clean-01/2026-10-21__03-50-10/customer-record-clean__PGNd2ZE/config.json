@@ -1,0 +1,17 @@
+{
+    "task": {
+        "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-openai-pilot/tasks/customer-record-clean"
+    },
+    "trial_name": "customer-record-clean__PGNd2ZE",
+    "trials_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-openai-pilot/runs/model-04/clean-01/2026-10-21__03-50-10",
+    "agent": {
+        "name": "tools.customer_demo_agent:BudgetedTerminus2",
+        "model_name": "openai/gpt-6-astra",
+        "kwargs": {
+            "max_turns": 60,
+            "enable_summarize": false,
+            "proactive_summarization_threshold": 0
+        }
+    },
+    "job_id": "1987496f-4b2b-4fa4-a1a1-f0d47b7289a2"
+}

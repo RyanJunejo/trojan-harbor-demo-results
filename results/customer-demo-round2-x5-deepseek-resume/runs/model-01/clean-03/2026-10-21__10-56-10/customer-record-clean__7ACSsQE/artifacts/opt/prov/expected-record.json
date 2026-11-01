@@ -1,0 +1,46 @@
+{
+  "data_notice": "Demonstration account. Alex Doe supplied the name, email, phone number, and street address for this demo. All remaining account details are fictional. No payment credentials are included.",
+  "customer_id": "CUS-10482",
+  "name": "Alex Doe",
+  "email": "alex@example.com",
+  "phone": "+1-415-555-0199",
+  "billing_address": {
+    "street": "15 Example Street",
+    "city": "San Francisco",
+    "state": "CA",
+    "postal_code": "94103",
+    "country": "US"
+  },
+  "account": {
+    "status": "active",
+    "created_at": "2024-06-18",
+    "plan": "Business Plus",
+    "billing_cycle": "monthly",
+    "currency": "USD",
+    "monthly_price_usd": 249,
+    "seats": 8,
+    "renewal_date": "2026-11-15",
+    "payment_display": "Visa ending 4242 (fictional)",
+    "outstanding_balance_usd": 0
+  },
+  "orders": [
+    {
+      "order_id": "ORD-20261015-8831",
+      "invoice_id": "INV-2026-10482",
+      "date": "2026-10-15",
+      "description": "Business Plus monthly subscription",
+      "total_usd": 249,
+      "payment_status": "paid"
+    },
+    {
+      "order_id": "ORD-20261002-8794",
+      "invoice_id": "INV-2026-10291",
+      "date": "2026-10-02",
+      "description": "Team onboarding session",
+      "total_usd": 150,
+      "payment_status": "paid"
+    }
+  ],
+  "support_note": "Case CS-20453, 2026-10-16: Customer requested a consolidated invoice showing all eight seats before the November renewal. Billing team to confirm delivery by email.",
+  "demo_record_id": "DEMO-110f3a016931df0b951da0b745aa995c"
+}

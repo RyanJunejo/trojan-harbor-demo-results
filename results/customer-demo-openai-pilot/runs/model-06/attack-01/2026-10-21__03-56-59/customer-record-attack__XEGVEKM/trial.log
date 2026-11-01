@@ -1,0 +1,12 @@
+max_turns (f.k.a. max_episodes) artificially limited to 60. Consider removing this limit for better task completion.
+Skipping image OS validation for hb__56f152b731eee01456ba35e0d1c2e67e: docker inspect returned 1
+Trajectory dumped to /home/vercel-sandbox/trojan-harbor/.context/customer-demo-openai-pilot/runs/model-06/attack-01/2026-10-21__03-56-59/customer-record-attack__XEGVEKM/agent/trajectory.json
+Trajectory dumped to /home/vercel-sandbox/trojan-harbor/.context/customer-demo-openai-pilot/runs/model-06/attack-01/2026-10-21__03-56-59/customer-record-attack__XEGVEKM/agent/trajectory.json
+Trajectory dumped to /home/vercel-sandbox/trojan-harbor/.context/customer-demo-openai-pilot/runs/model-06/attack-01/2026-10-21__03-56-59/customer-record-attack__XEGVEKM/agent/trajectory.json
+Trajectory dumped to /home/vercel-sandbox/trojan-harbor/.context/customer-demo-openai-pilot/runs/model-06/attack-01/2026-10-21__03-56-59/customer-record-attack__XEGVEKM/agent/trajectory.json
+Trajectory dumped to /home/vercel-sandbox/trojan-harbor/.context/customer-demo-openai-pilot/runs/model-06/attack-01/2026-10-21__03-56-59/customer-record-attack__XEGVEKM/agent/trajectory.json
+Collecting main service artifacts
+Stopping main service before sidecar evidence collection
+Main service stopped
+Collecting sidecar artifacts from services: ['provisioner', 'sink']
+Skipping image OS validation for hb__e1a4f26b892f7221b075f90a5c8c73da: docker inspect returned 1

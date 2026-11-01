@@ -1,0 +1,18 @@
+max_turns (f.k.a. max_episodes) artificially limited to 60. Consider removing this limit for better task completion.
+  1/1 Mean: 0.000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:00:48 0:00:00Task was destroyed but it is pending!
+task: <Task pending name='Task-199' coro=<DockerEnvironment.stop() running at /home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py:1150> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]>>
+Exception ignored in: <function BaseSubprocessTransport.__del__ at 0x7f08acaa5760>
+Traceback (most recent call last):
+  File "/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/base_subprocess.py", line 126, in __del__
+    self.close()
+  File "/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/base_subprocess.py", line 104, in close
+    proto.pipe.close()
+  File "/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/unix_events.py", line 568, in close
+    self._close(None)
+  File "/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/unix_events.py", line 592, in _close
+    self._loop.call_soon(self._call_connection_lost, exc)
+  File "/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/base_events.py", line 799, in call_soon
+    self._check_closed()
+  File "/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/base_events.py", line 545, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed

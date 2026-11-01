@@ -1,0 +1,8 @@
+{
+    "jobs_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks/runs/witness-attack",
+    "tasks": [
+        {
+            "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks/controls/witness-attack/customer-record-attack"
+        }
+    ]
+}

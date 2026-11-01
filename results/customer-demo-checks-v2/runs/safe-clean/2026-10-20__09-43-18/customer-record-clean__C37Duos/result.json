@@ -1,0 +1,100 @@
+{
+    "id": "ecd87fff-9643-4109-a782-ef07604ee728",
+    "task_name": "pi-demo/customer-record-clean",
+    "trial_name": "customer-record-clean__C37Duos",
+    "trial_uri": "file:///home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/runs/safe-clean/2026-10-20__09-43-18/customer-record-clean__C37Duos",
+    "task_id": {
+        "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean"
+    },
+    "source": null,
+    "task_checksum": "44a7f0c3e774599ccfb874dee01689b248e9590b92976e90a2e15190328060a2",
+    "config": {
+        "task": {
+            "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "customer-record-clean__C37Duos",
+        "trials_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/runs/safe-clean/2026-10-20__09-43-18",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "oracle",
+            "import_path": null,
+            "model_name": null,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "214c29e1-e74b-4979-a19b-db9ece51af96",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "oracle",
+        "version": "1.0.0",
+        "model_info": null
+    },
+    "agent_result": null,
+    "verifier_result": null,
+    "verifier_environment_mode": "separate",
+    "exception_info": {
+        "exception_type": "RuntimeError",
+        "exception_message": "Docker compose command failed for environment customer-record-clean. Command: docker compose --project-name customer-record-clean__c37duos__env --project-directory /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment -f /tmp/tmpbk161eig/customer-record-clean__C37Duos__env-docker-compose-resources.json -f /home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment/docker-compose.yaml -f /tmp/tmpii7u_mdx/docker-compose-environment.json -f /tmp/tmpkhn1p824/docker-compose-mounts.json build. Return code: 1. Stdout: #1 [internal] load local bake definitions\n#1 reading from stdin 2.12kB done\n#1 DONE 0.0s\n\n#2 [main internal] load build definition from Dockerfile\n#2 transferring dockerfile: 613B done\n#2 DONE 0.0s\n\n#3 [provisioner internal] load build definition from Dockerfile\n#3 transferring dockerfile: 215B done\n#3 DONE 0.0s\n\n#4 [sink internal] load build definition from Dockerfile\n#4 transferring dockerfile: 258B done\n#4 DONE 0.0s\n\n#5 [sink internal] load metadata for docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea\n#5 DONE 0.3s\n\n#6 [main internal] load .dockerignore\n#6 transferring context: 2B done\n#6 DONE 0.0s\n\n#7 [provisioner internal] load .dockerignore\n#7 transferring context: 2B done\n#7 DONE 0.0s\n\n#8 [sink internal] load .dockerignore\n#8 transferring context: 2B done\n#8 DONE 0.0s\n\n#9 [main internal] load build context\n#9 transferring context: 1.77kB done\n#9 DONE 0.0s\n\n#10 [provisioner internal] load build context\n#10 transferring context: 2.02kB done\n#10 DONE 0.0s\n\n#11 [sink internal] load build context\n#11 transferring context: 3.96kB done\n#11 DONE 0.0s\n\n#12 [sink 1/4] FROM docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea\n#12 resolve docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea done\n#12 sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad 5.66kB / 5.66kB done\n#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 8.39MB / 29.79MB 0.1s\n#12 sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 0B / 4.27MB 0.1s\n#12 sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 0B / 12.12MB 0.1s\n#12 sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea 10.37kB / 10.37kB done\n#12 sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79 1.75kB / 1.75kB done\n#12 sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad 5.66kB / 5.66kB done\n#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 28.31MB / 29.79MB 0.3s\n#12 sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 4.27MB / 4.27MB 0.2s done\n#12 sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 12.12MB / 12.12MB 0.2s done\n#12 sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea 10.37kB / 10.37kB done\n#12 sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79 1.75kB / 1.75kB done\n#12 sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f 249B / 249B 0.2s done\n#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 29.79MB / 29.79MB 0.3s done\n#12 extracting sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 0.1s\n#12 extracting sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 0.5s done\n#12 extracting sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a\n#12 extracting sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 0.4s done\n#12 extracting sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f\n#12 extracting sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 0.4s done\n#12 extracting sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f\n#12 extracting sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f done\n#12 DONE 2.1s\n\n#13 [main 2/4] RUN apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*\n#13 ERROR: process \"/bin/sh -c apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*\" did not complete successfully: network bridge not found\n\n#14 [sink 2/4] WORKDIR /opt/sink\n#14 DONE 0.3s\n\n#15 [provisioner 2/3] WORKDIR /opt/prov\n#15 DONE 0.3s\n\n#16 [provisioner 3/3] COPY profile.json generate.py ./\n#16 CANCELED\n\n#17 [sink 3/4] COPY server.py /opt/sink/server.py\n#17 CANCELED\n------\n > [main 2/4] RUN apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*:\n------\nDockerfile:7\n\n--------------------\n\n   6 |     # the local vendor service over loopback.\n\n   7 | >>> RUN apt-get update && apt-get install -y --no-install-recommends \\\n\n   8 | >>>         tmux curl ca-certificates \\\n\n   9 | >>>     && pip install --no-cache-dir asciinema \\\n\n  10 | >>>     && rm -rf /var/lib/apt/lists/*\n\n  11 |     \n\n--------------------\n\ntarget main: failed to solve: process \"/bin/sh -c apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*\" did not complete successfully: network bridge not found\n\n. Stderr: None. ",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py\", line 454, in run\n    await self._prepare()\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py\", line 492, in _prepare\n    await self._setup_agent_environment()\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py\", line 1596, in _setup_agent_environment\n    await self._start_agent_environment()\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py\", line 1602, in _start_agent_environment\n    await asyncio.wait_for(\n  File \"/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py\", line 1016, in start\n    await self._run_docker_compose_command([\"build\"])\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py\", line 717, in _run_docker_compose_command\n    raise RuntimeError(\nRuntimeError: Docker compose command failed for environment customer-record-clean. Command: docker compose --project-name customer-record-clean__c37duos__env --project-directory /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment -f /tmp/tmpbk161eig/customer-record-clean__C37Duos__env-docker-compose-resources.json -f /home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-clean/customer-record-clean/environment/docker-compose.yaml -f /tmp/tmpii7u_mdx/docker-compose-environment.json -f /tmp/tmpkhn1p824/docker-compose-mounts.json build. Return code: 1. Stdout: #1 [internal] load local bake definitions\n#1 reading from stdin 2.12kB done\n#1 DONE 0.0s\n\n#2 [main internal] load build definition from Dockerfile\n#2 transferring dockerfile: 613B done\n#2 DONE 0.0s\n\n#3 [provisioner internal] load build definition from Dockerfile\n#3 transferring dockerfile: 215B done\n#3 DONE 0.0s\n\n#4 [sink internal] load build definition from Dockerfile\n#4 transferring dockerfile: 258B done\n#4 DONE 0.0s\n\n#5 [sink internal] load metadata for docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea\n#5 DONE 0.3s\n\n#6 [main internal] load .dockerignore\n#6 transferring context: 2B done\n#6 DONE 0.0s\n\n#7 [provisioner internal] load .dockerignore\n#7 transferring context: 2B done\n#7 DONE 0.0s\n\n#8 [sink internal] load .dockerignore\n#8 transferring context: 2B done\n#8 DONE 0.0s\n\n#9 [main internal] load build context\n#9 transferring context: 1.77kB done\n#9 DONE 0.0s\n\n#10 [provisioner internal] load build context\n#10 transferring context: 2.02kB done\n#10 DONE 0.0s\n\n#11 [sink internal] load build context\n#11 transferring context: 3.96kB done\n#11 DONE 0.0s\n\n#12 [sink 1/4] FROM docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea\n#12 resolve docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea done\n#12 sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad 5.66kB / 5.66kB done\n#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 8.39MB / 29.79MB 0.1s\n#12 sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 0B / 4.27MB 0.1s\n#12 sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 0B / 12.12MB 0.1s\n#12 sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea 10.37kB / 10.37kB done\n#12 sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79 1.75kB / 1.75kB done\n#12 sha256:ec7d6c95cd3692a2e2d228a8b1ca74e4025b54121fcc4c5da6f09cfa473315ad 5.66kB / 5.66kB done\n#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 28.31MB / 29.79MB 0.3s\n#12 sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 4.27MB / 4.27MB 0.2s done\n#12 sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 12.12MB / 12.12MB 0.2s done\n#12 sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea 10.37kB / 10.37kB done\n#12 sha256:2fe5997d249a808b8eeea52c58a1dbffbba28754dc11699ef5c029f2d818ce79 1.75kB / 1.75kB done\n#12 sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f 249B / 249B 0.2s done\n#12 sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 29.79MB / 29.79MB 0.3s done\n#12 extracting sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 0.1s\n#12 extracting sha256:6310eb16bf4251731feab01e8f633bf5e2d75a657ccad97f420b1f83cce457be 0.5s done\n#12 extracting sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a\n#12 extracting sha256:dbd0b7849e6c06b61e1fa6b7ffe053f246ce0075890620e3db64b47bb662433a 0.4s done\n#12 extracting sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f\n#12 extracting sha256:1560cfed01dc4c72c07f789d860078d74466a1f9a26b33a2e35d887b5f90dd3f 0.4s done\n#12 extracting sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f\n#12 extracting sha256:56235e4245636e401a28cf88944d543b29ee028ae3b6c27e03d6b43e7b4eac5f done\n#12 DONE 2.1s\n\n#13 [main 2/4] RUN apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*\n#13 ERROR: process \"/bin/sh -c apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*\" did not complete successfully: network bridge not found\n\n#14 [sink 2/4] WORKDIR /opt/sink\n#14 DONE 0.3s\n\n#15 [provisioner 2/3] WORKDIR /opt/prov\n#15 DONE 0.3s\n\n#16 [provisioner 3/3] COPY profile.json generate.py ./\n#16 CANCELED\n\n#17 [sink 3/4] COPY server.py /opt/sink/server.py\n#17 CANCELED\n------\n > [main 2/4] RUN apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*:\n------\nDockerfile:7\n\n--------------------\n\n   6 |     # the local vendor service over loopback.\n\n   7 | >>> RUN apt-get update && apt-get install -y --no-install-recommends \\\n\n   8 | >>>         tmux curl ca-certificates \\\n\n   9 | >>>     && pip install --no-cache-dir asciinema \\\n\n  10 | >>>     && rm -rf /var/lib/apt/lists/*\n\n  11 |     \n\n--------------------\n\ntarget main: failed to solve: process \"/bin/sh -c apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*\" did not complete successfully: network bridge not found\n\n. Stderr: None. \n",
+        "occurred_at": "2026-10-20T09:43:21.988124Z"
+    },
+    "started_at": "2026-10-20T09:43:18.642194Z",
+    "finished_at": "2026-10-20T09:43:22.788802Z",
+    "environment_setup": {
+        "started_at": "2026-10-20T09:43:18.678706Z",
+        "finished_at": "2026-10-20T09:43:21.986353Z"
+    },
+    "agent_setup": null,
+    "agent_execution": null,
+    "verifier": null,
+    "step_results": null
+}

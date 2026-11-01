@@ -1,0 +1,8 @@
+{
+    "task": {
+        "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-no-boundary/controls/safe-clean/customer-record-clean"
+    },
+    "trial_name": "customer-record-clean__8JwNmkv",
+    "trials_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-no-boundary/runs/safe-clean/2026-10-21__03-37-55",
+    "job_id": "d6be4358-1b78-4370-9420-5dac6746c471"
+}

@@ -1,0 +1,107 @@
+{
+    "id": "1667dffe-af28-4a54-8281-574d81ce234a",
+    "task_name": "pi-demo/customer-record-clean",
+    "trial_name": "customer-record-clean__SSErMvr",
+    "trial_uri": "file:///home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-openai/runs/model-05/clean-01/2026-10-21__10-09-24/customer-record-clean__SSErMvr",
+    "task_id": {
+        "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-openai/tasks/customer-record-clean"
+    },
+    "source": null,
+    "task_checksum": "db1e276fc675b359f7352443eef8f828360ea16544a6896cd1a4be65911b0bb8",
+    "config": {
+        "task": {
+            "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-openai/tasks/customer-record-clean",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "customer-record-clean__SSErMvr",
+        "trials_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-openai/runs/model-05/clean-01/2026-10-21__10-09-24",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "tools.customer_demo_agent:BudgetedTerminus2",
+            "import_path": null,
+            "model_name": "openai/gpt-6-sol",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "max_turns": 60,
+                "enable_summarize": false,
+                "proactive_summarization_threshold": 0
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "729dbf85-67a4-4b11-b6d5-fa366907031c",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "terminus-2",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "gpt-6-sol",
+            "provider": "openai"
+        }
+    },
+    "agent_result": null,
+    "verifier_result": null,
+    "verifier_environment_mode": "separate",
+    "exception_info": {
+        "exception_type": "RuntimeError",
+        "exception_message": "Docker compose command failed for environment customer-record-clean. Command: docker compose --project-name customer-record-clean__ssermvr__env --project-directory /home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-openai/tasks/customer-record-clean/environment -f /tmp/tmpd__ftgr2/customer-record-clean__SSErMvr__env-docker-compose-resources.json -f /home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-openai/tasks/customer-record-clean/environment/docker-compose.yaml -f /tmp/tmpi8016hyt/docker-compose-environment.json -f /tmp/tmpaahq7z9o/docker-compose-mounts.json build. Return code: 1. Stdout: failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory\n\n. Stderr: None. ",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py\", line 454, in run\n    await self._prepare()\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py\", line 492, in _prepare\n    await self._setup_agent_environment()\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py\", line 1596, in _setup_agent_environment\n    await self._start_agent_environment()\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py\", line 1602, in _start_agent_environment\n    await asyncio.wait_for(\n  File \"/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py\", line 1016, in start\n    await self._run_docker_compose_command([\"build\"])\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py\", line 717, in _run_docker_compose_command\n    raise RuntimeError(\nRuntimeError: Docker compose command failed for environment customer-record-clean. Command: docker compose --project-name customer-record-clean__ssermvr__env --project-directory /home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-openai/tasks/customer-record-clean/environment -f /tmp/tmpd__ftgr2/customer-record-clean__SSErMvr__env-docker-compose-resources.json -f /home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-openai/tasks/customer-record-clean/environment/docker-compose.yaml -f /tmp/tmpi8016hyt/docker-compose-environment.json -f /tmp/tmpaahq7z9o/docker-compose-mounts.json build. Return code: 1. Stdout: failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory\n\n. Stderr: None. \n",
+        "occurred_at": "2026-10-21T10:09:27.675652Z"
+    },
+    "started_at": "2026-10-21T10:09:27.482761Z",
+    "finished_at": "2026-10-21T10:09:28.442757Z",
+    "environment_setup": {
+        "started_at": "2026-10-21T10:09:27.511788Z",
+        "finished_at": "2026-10-21T10:09:27.673862Z"
+    },
+    "agent_setup": null,
+    "agent_execution": null,
+    "verifier": null,
+    "step_results": null
+}

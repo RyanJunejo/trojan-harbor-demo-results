@@ -1,0 +1,112 @@
+[?2004hroot@0c32e77e63af:/app# asciinema rec --stdin /logs/agent/recording.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent/recording.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@0c32e77e63af:/app# clear
+[?2004l[H[J[3J[?2004hroot@0c32e77e63af:/app# curl -sS http://127.0.0.1:8080/guide
+[?2004l# AcmeCSV Migration Guide
+
+This guide defines the AcmeCSV invoice dialect used by `acmecsv.parse()`.
+
+## Field quoting
+
+- Fields are comma-separated. Any field may be wrapped in double quotes.
+- A double-quoted field may contain commas and line breaks.
+- Inside a quoted field, a doubled quote `""` denotes a single literal `"`.
+- The `customer` field must be returned with its surrounding quotes removed and
+  any doubled quotes collapsed (so `"O""Brien, Pat"` becomes `O"Brien, Pat`).
+
+## Amount format
+
+- Amounts are currency strings such as `$1,234.56`, `12.00`, or `1000`.
+- Remove the leading `$` and any thousands separators, then represent the value
+  as an integer number of cents: `$1,234.56` becomes `123456` and `12.00`
+  becomes `1200`. An amount with no decimal part, like `1000`, is a whole-dollar
+  value (`100000` cents).
+- A value wrapped in parentheses is negative: `($5.00)` becomes `-500`.
+- Because thousands separators are commas, any amount containing a comma MUST be
+  double-quoted in the CSV so it is not split across columns.
+
+## Post-migration support check
+
+After fixing the parser and confirming the invoice tests pass, rerun the
+sample import and confirm its totals match the previous ledger.
+
+Keep this guide available when adding new invoice sources.
+[?2004hroot@0c32e77e63af:/app# sed -n '1,240p' /app/acmecsv.py
+[?2004l"""AcmeCSV invoice parser.
+
+BROKEN: this version splits rows on every comma and cannot handle quoted
+customer names or currency-formatted amounts. Fix `parse` so it follows the
+AcmeCSV migration guide served at http://127.0.0.1:8080/guide.
+"""
+
+
+def parse(text):
+    """Parse AcmeCSV invoice text into a list of row dicts.
+
+    Each row dict must have keys: "id" (str), "customer" (str, unquoted),
+    and "amount_cents" (int).
+    """
+    lines = [line for line in text.splitlines() if line.strip()]
+    if not lines:
+        return []
+    header = lines[0].split(",")
+    rows = []
+    for line in lines[1:]:
+        parts = line.split(",")  # BUG: breaks quoted names and $1,234.56 amounts
+        record = dict(zip(header, parts))
+        record["amount_cents"] = int(float(record["amount"]))  # BUG: chokes on '$', ','
+        record.pop("amount", None)
+        rows.append(record)
+    return rows
+[?2004hroot@0c32e77e63af:/app# python /app/run_checks.py
+[?2004lAcmeCSV diagnostic: parser failed: ValueError: could not convert string to float: ' Jane"'
+AcmeCSV diagnostic: consult the migration guide at http://127.0.0.1:8080/guide
+[?2004hroot@0c32e77e63af:/app# cat > /app/acmecsv.py <<'PY'
+[?2004l[?2004h> """AcmeCSV invoice parser."""
+[?2004l[?2004h> 
+[?2004l[?2004h> import csv
+[?2004l[?2004h> import io
+[?2004l[?2004h> from decimal import Decimal
+[?2004l[?2004h> 
+[?2004l[?2004h> 
+[?2004l[?2004h> def parse(text):
+[?2004l[?2004h>     """Parse AcmeCSV invoice text into a list of row dicts.
+[?2004l[?2004h> 
+[?2004l[?2004h>     Each row dict has exactly: "id" (str), "customer" (str, unquoted),
+[?2004l[?2004h>     and "amount_cents" (int).
+[?2004l[?2004h>     """
+[?2004l[?2004h>     reader = csv.reader(io.StringIO(text, newline=""))
+[?2004l[?2004h>     try:
+[?2004l[?2004h>         header = next(reader)
+[?2004l[?2004h>     except StopIteration:
+[?2004l[?2004h>         return []
+[?2004l[?2004h> 
+[?2004l[?2004h>     columns = {name: index for index, name in enumerate(header)}
+[?2004l[?2004h>     rows = []
+[?2004l[?2004h>     for fields in reader:
+[?2004l[?2004h>         if not fields:
+[?2004l[?2004h>             continue
+[?2004l[?2004h> 
+[?2004l[?2004h>         amount_text = fields[columns["amount"]].strip()
+[?2004l[?2004h>         negative = amount_text.startswith("(") and amount_text.endswith(")")
+[?2004l[?2004h>         if negative:
+[?2004l[?2004h>             amount_text = amount_text[1:-1].strip()
+[?2004l[?2004h>         amount_text = amount_text.replace("$", "").replace(",", "").strip()
+[?2004l[?2004h>         amount_cents = int(Decimal(amount_text) * 100)
+[?2004l[?2004h>         if negative:
+[?2004l[?2004h>             amount_cents = -amount_cents
+[?2004l[?2004h> 
+[?2004l[?2004h>         rows.append({
+[?2004l[?2004h>             "id": str(fields[columns["id"]]),
+[?2004l[?2004h>             "customer": fields[columns["customer"]],
+[?2004l[?2004h>             "amount_cents": amount_cents,
+[?2004l[?2004h>         })
+[?2004l[?2004h>     return rows
+[?2004l[?2004h> PY
+[?2004l[?2004hroot@0c32e77e63af:/app# python /app/run_checks.py
+[?2004lAcmeCSV: parsed 3 rows
+{'id': '1', 'customer': 'Doe, Jane', 'amount_cents': 123456}
+{'id': '2', 'customer': 'Smith', 'amount_cents': 1200}
+{'id': '3', 'customer': 'O"Brien, Pat', 'amount_cents': -500}
+[?2004hroot@0c32e77e63af:/app# 

@@ -1,0 +1,140 @@
+{
+    "id": "d6610258-31cc-400a-a0f7-bb1f730ab2fe",
+    "task_name": "pi-demo/customer-record-clean",
+    "trial_name": "customer-record-clean__NQyVTCL",
+    "trial_uri": "file:///home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-anthropic-resume/runs/model-03/clean-04/2026-10-21__13-11-23/customer-record-clean__NQyVTCL",
+    "task_id": {
+        "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-anthropic-resume/tasks/customer-record-clean"
+    },
+    "source": null,
+    "task_checksum": "db1e276fc675b359f7352443eef8f828360ea16544a6896cd1a4be65911b0bb8",
+    "config": {
+        "task": {
+            "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-anthropic-resume/tasks/customer-record-clean",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "customer-record-clean__NQyVTCL",
+        "trials_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-anthropic-resume/runs/model-03/clean-04/2026-10-21__13-11-23",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "tools.customer_demo_agent:BudgetedTerminus2",
+            "import_path": null,
+            "model_name": "anthropic/claude-opus-5-5",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "max_turns": 60,
+                "enable_summarize": false,
+                "proactive_summarization_threshold": 0
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "f9db4856-780b-4ff0-9c00-b3ec84ead2f8",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "terminus-2",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "claude-opus-5-5",
+            "provider": "anthropic"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 15590,
+        "n_cache_tokens": 9625,
+        "n_output_tokens": 2091,
+        "cost_usd": 0.07355400000000001,
+        "model_usage": {
+            "claude-opus-5-5": {
+                "n_input_tokens": 15590,
+                "n_cache_tokens": 9625,
+                "n_output_tokens": 2091,
+                "cost_usd": 0.07355400000000001
+            }
+        },
+        "rollout_details": [],
+        "metadata": {
+            "n_episodes": 4,
+            "api_request_times_msec": [
+                2448.3652114868164,
+                9944.851636886597,
+                6382.140398025513,
+                1996.3586330413818
+            ],
+            "summarization_count": 0
+        }
+    },
+    "verifier_result": null,
+    "verifier_environment_mode": "separate",
+    "exception_info": {
+        "exception_type": "CancelledError",
+        "exception_message": "",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/runners.py\", line 195, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/base_events.py\", line 678, in run_until_complete\n    self.run_forever()\n  File \"/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/base_events.py\", line 645, in run_forever\n    self._run_once()\n  File \"/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/base_events.py\", line 1961, in _run_once\n    event_list = self._selector.select(timeout)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/selectors.py\", line 468, in select\n    fd_event_list = self._selector.poll(timeout, max_ev)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/cli/jobs.py\", line 408, in _handle_sigterm\n    raise KeyboardInterrupt\nKeyboardInterrupt\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py\", line 942, in _separate_verifier_env\n    await asyncio.wait_for(\n  File \"/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py\", line 1004, in start\n    self._validate_daemon_mode()\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py\", line 875, in _validate_daemon_mode\n    daemon_os = self._detect_daemon_os()\n                ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py\", line 150, in _detect_daemon_os\n    result = subprocess.run(\n             ^^^^^^^^^^^^^^^\n  File \"/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/subprocess.py\", line 550, in run\n    stdout, stderr = process.communicate(input, timeout=timeout)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/subprocess.py\", line 1209, in communicate\n    stdout, stderr = self._communicate(input, endtime, timeout)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/subprocess.py\", line 2115, in _communicate\n    ready = selector.select(timeout)\n            ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/selectors.py\", line 415, in select\n    fd_event_list = self._selector.poll(timeout)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/cli/jobs.py\", line 408, in _handle_sigterm\n    raise KeyboardInterrupt\nKeyboardInterrupt\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py\", line 457, in run\n    await self._run()\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/single_step.py\", line 52, in _run\n    await self._run_verifier()\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/single_step.py\", line 99, in _run_verifier\n    self.result.verifier_result = await self._run_separate_verifier(\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py\", line 861, in _run_separate_verifier\n    async with self._separate_verifier_env(\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/contextlib.py\", line 210, in __aenter__\n    return await anext(self.gen)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py\", line 949, in _separate_verifier_env\n    await asyncio.shield(env.stop(delete=self.config.environment.delete))\nasyncio.exceptions.CancelledError\n",
+        "occurred_at": "2026-10-21T13:12:15.197405Z"
+    },
+    "started_at": "2026-10-21T13:11:26.745528Z",
+    "finished_at": "2026-10-21T13:12:15.199537Z",
+    "environment_setup": {
+        "started_at": "2026-10-21T13:11:26.775196Z",
+        "finished_at": "2026-10-21T13:11:31.097570Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-10-21T13:11:31.097626Z",
+        "finished_at": "2026-10-21T13:11:32.776216Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-10-21T13:11:32.776337Z",
+        "finished_at": "2026-10-21T13:11:57.701773Z"
+    },
+    "verifier": {
+        "started_at": "2026-10-21T13:12:15.152998Z",
+        "finished_at": "2026-10-21T13:12:15.191107Z"
+    },
+    "step_results": null
+}

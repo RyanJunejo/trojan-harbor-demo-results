@@ -1,0 +1,113 @@
+Traceback (most recent call last):
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 454, in run
+    await self._prepare()
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 492, in _prepare
+    await self._setup_agent_environment()
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 1596, in _setup_agent_environment
+    await self._start_agent_environment()
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/trial/trial.py", line 1602, in _start_agent_environment
+    await asyncio.wait_for(
+  File "/home/vercel-sandbox/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1016, in start
+    await self._run_docker_compose_command(["build"])
+  File "/home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 717, in _run_docker_compose_command
+    raise RuntimeError(
+RuntimeError: Docker compose command failed for environment customer-record-attack. Command: docker compose --project-name customer-record-attack__ehyeal9__env --project-directory /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-attack/customer-record-attack/environment -f /tmp/tmpvqw8xn_z/customer-record-attack__eHYEaL9__env-docker-compose-resources.json -f /home/vercel-sandbox/trojan-harbor/.venv/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v2/controls/safe-attack/customer-record-attack/environment/docker-compose.yaml -f /tmp/tmpajep6bws/docker-compose-environment.json -f /tmp/tmp2n5pgn1r/docker-compose-mounts.json build. Return code: 1. Stdout: #1 [internal] load local bake definitions
+#1 reading from stdin 2.13kB done
+#1 DONE 0.0s
+
+#2 [main internal] load build definition from Dockerfile
+#2 transferring dockerfile: 613B done
+#2 DONE 0.0s
+
+#3 [provisioner internal] load build definition from Dockerfile
+#3 transferring dockerfile: 215B done
+#3 DONE 0.0s
+
+#4 [sink internal] load build definition from Dockerfile
+#4 transferring dockerfile: 258B done
+#4 DONE 0.0s
+
+#5 [provisioner internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [main internal] load metadata for docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea
+#6 DONE 0.0s
+
+#7 [provisioner 2/3] WORKDIR /opt/prov
+#7 CACHED
+
+#8 [main internal] load .dockerignore
+#8 transferring context: 2B done
+#8 DONE 0.0s
+
+#9 [sink internal] load .dockerignore
+#9 transferring context: 2B done
+#9 DONE 0.0s
+
+#10 [provisioner internal] load build context
+#10 transferring context: 1.15kB done
+#10 DONE 0.0s
+
+#11 [sink 2/4] WORKDIR /opt/sink
+#11 CACHED
+
+#12 [main internal] load build context
+#12 transferring context: 129B done
+#12 DONE 0.0s
+
+#13 [sink internal] load build context
+#13 transferring context: 1.64kB done
+#13 DONE 0.0s
+
+#14 [provisioner 1/4] FROM docker.io/library/python:3.12-slim@sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea
+#14 CACHED
+
+#15 [provisioner 3/3] COPY profile.json generate.py ./
+#15 ...
+
+#16 [sink 3/4] COPY server.py /opt/sink/server.py
+#16 DONE 0.2s
+
+#17 [main 2/4] RUN apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*
+#17 ERROR: process "/bin/sh -c apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*" did not complete successfully: network bridge not found
+
+#15 [provisioner 3/3] COPY profile.json generate.py ./
+#15 DONE 0.3s
+
+#18 [provisioner] exporting to image
+#18 exporting layers
+#18 exporting layers 0.2s done
+#18 writing image sha256:0d91cb3a27157e157f3ff3c6290dbc6673330dce08b55b10025469fbd61cc93e done
+#18 naming to docker.io/library/customer-record-attack__ehyeal9__env-provisioner done
+#18 DONE 0.3s
+
+#19 [sink 4/4] COPY guide.md /opt/sink/guide.md
+#19 CANCELED
+------
+ > [main 2/4] RUN apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*:
+------
+Dockerfile:7
+
+--------------------
+
+   6 |     # the local vendor service over loopback.
+
+   7 | >>> RUN apt-get update && apt-get install -y --no-install-recommends \
+
+   8 | >>>         tmux curl ca-certificates \
+
+   9 | >>>     && pip install --no-cache-dir asciinema \
+
+  10 | >>>     && rm -rf /var/lib/apt/lists/*
+
+  11 |     
+
+--------------------
+
+target main: failed to solve: process "/bin/sh -c apt-get update && apt-get install -y --no-install-recommends         tmux curl ca-certificates     && pip install --no-cache-dir asciinema     && rm -rf /var/lib/apt/lists/*" did not complete successfully: network bridge not found
+
+. Stderr: None. 

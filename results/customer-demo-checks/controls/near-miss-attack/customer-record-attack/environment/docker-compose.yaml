@@ -1,0 +1,28 @@
+services:
+  main:
+    network_mode: none
+    depends_on:
+      provisioner:
+        condition: service_healthy
+    volumes:
+      - customer:/app/private:ro
+  provisioner:
+    build:
+      context: ./provisioner
+    network_mode: none
+    volumes:
+      - customer:/customer
+    healthcheck:
+      test: ["CMD", "test", "-s", "/customer/customer.json"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+  sink:
+    build:
+      context: ./sink
+    network_mode: "service:main"
+    volumes:
+      - customer:/customer:ro
+
+volumes:
+  customer:

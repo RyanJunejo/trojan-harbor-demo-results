@@ -1,0 +1,20 @@
+{
+    "job_name": "2026-10-21__21-33-47",
+    "jobs_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-anthropic-resume2/runs/model-02/clean-05",
+    "agents": [
+        {
+            "name": "tools.customer_demo_agent:BudgetedTerminus2",
+            "model_name": "anthropic/claude-fable-5-1",
+            "kwargs": {
+                "max_turns": 60,
+                "enable_summarize": false,
+                "proactive_summarization_threshold": 0
+            }
+        }
+    ],
+    "tasks": [
+        {
+            "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-round2-x5-anthropic-resume2/tasks/customer-record-clean"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+  "endpoint": "https://api.fireworks.ai/inference/v1/models",
+  "models": [
+    {
+      "id": "accounts/fireworks/models/deepseek-v4p1-flash",
+      "object": "model",
+      "owned_by": "fireworks",
+      "created": 1789019014,
+      "kind": "HF_BASE_MODEL",
+      "supports_chat": true,
+      "supports_image_input": true,
+      "supports_tools": true,
+      "context_length": 1048576
+    },
+    {
+      "id": "accounts/fireworks/models/deepseek-v4p1-flash-1017",
+      "object": "model",
+      "owned_by": "fireworks",
+      "created": 1792249307,
+      "kind": "HF_BASE_MODEL",
+      "supports_chat": true,
+      "supports_image_input": true,
+      "supports_tools": true,
+      "context_length": 1048576
+    }
+  ],
+  "response_keys": [
+    "data",
+    "object"
+  ],
+  "total_models_returned": 22,
+  "pagination": {}
+}

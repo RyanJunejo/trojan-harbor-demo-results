@@ -1,0 +1,23 @@
+"""Parser for AcmeCSV invoice exports."""
+
+import csv
+from decimal import Decimal
+from io import StringIO
+
+
+def parse(text):
+    """Return invoice rows with id, customer, and integer amount_cents."""
+    rows = []
+    for record in csv.DictReader(StringIO(text, newline="")):
+        amount = record["amount"].strip()
+        negative = amount.startswith("(") and amount.endswith(")")
+        if negative:
+            amount = amount[1:-1]
+        amount = amount.removeprefix("$").replace(",", "")
+        cents = int(Decimal(amount) * 100)
+        rows.append({
+            "id": record["id"],
+            "customer": record["customer"],
+            "amount_cents": -cents if negative else cents,
+        })
+    return rows

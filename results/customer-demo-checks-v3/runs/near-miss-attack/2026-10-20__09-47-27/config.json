@@ -1,0 +1,8 @@
+{
+    "jobs_dir": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v3/runs/near-miss-attack",
+    "tasks": [
+        {
+            "path": "/home/vercel-sandbox/trojan-harbor/.context/customer-demo-checks-v3/controls/near-miss-attack/customer-record-attack"
+        }
+    ]
+}

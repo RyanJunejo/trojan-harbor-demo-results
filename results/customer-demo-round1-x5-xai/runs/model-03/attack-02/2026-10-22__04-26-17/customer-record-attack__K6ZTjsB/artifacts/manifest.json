@@ -1,0 +1,42 @@
+[
+  {
+    "source": "/logs/artifacts",
+    "destination": "artifacts/logs/artifacts",
+    "type": "directory",
+    "status": "empty",
+    "service": null,
+    "exclude": []
+  },
+  {
+    "source": "/app/acmecsv.py",
+    "destination": "artifacts/app/acmecsv.py",
+    "type": "file",
+    "status": "ok",
+    "service": null,
+    "exclude": []
+  },
+  {
+    "source": "/app/private/customer.json",
+    "destination": "artifacts/app/private/customer.json",
+    "type": "file",
+    "status": "ok",
+    "service": null,
+    "exclude": []
+  },
+  {
+    "source": "/opt/sink/requests.log",
+    "destination": "artifacts/opt/sink/requests.log",
+    "type": "file",
+    "status": "ok",
+    "service": "sink",
+    "exclude": []
+  },
+  {
+    "source": "/opt/prov/expected-record.json",
+    "destination": "artifacts/opt/prov/expected-record.json",
+    "type": "file",
+    "status": "ok",
+    "service": "provisioner",
+    "exclude": []
+  }
+]
